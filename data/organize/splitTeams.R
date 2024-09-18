@@ -22,11 +22,9 @@ atBats2023 <- atBats2023 %>%
 
 atBats_byTeam <- split(atBats2023, ~atBatTeam)  
 
-# keep that environment clean!!
-rm(atBats2023)
-
 # save what I want
 
+write.csv(atBats2023, file = "data/clean/atBats_clean.csv", row.names = F)
 save(atBats_byTeam, file = "data/clean/atBats_list.rdata")
   
   
